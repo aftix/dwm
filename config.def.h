@@ -31,6 +31,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,                  NULL,            0,       1,           -1 },
 	{ "Firefox",  NULL,                  NULL,       1 << 8,       0,           -1 },
   { "Firefox",  NULL, "Firefox Preferences",       1 << 8,       1,           -1 },
+  { "Conky",    NULL,                  NULL,            0,       1,           -1 },
+  { "feh",      NULL,                  NULL,            0,       1,           -1 },
 };
 
 /* layout(s) */
