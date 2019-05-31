@@ -30,10 +30,10 @@ static const Rule rules[] = {
 	/* class      instance    title                  tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,                  NULL,            0,       1,           -1 },
 	{ "Firefox",  NULL,                  NULL,       1 << 8,       0,           -1 },
-  { "Firefox",  NULL, "Firefox Preferences",       1 << 8,       1,           -1 },
-  { "Conky",    NULL,                  NULL,            0,       1,           -1 },
-  { "feh",      NULL,                  NULL,            0,       1,           -1 },
-  { "Xdialog",  NULL,                  NULL,            0,       1,           -1 },
+	{ "Firefox",  NULL, "Firefox Preferences",       1 << 8,       1,           -1 },
+	{ "Conky",    NULL,                  NULL,            0,       1,           -1 },
+	{ "feh",      NULL,                  NULL,            0,       1,           -1 },
+	{ "Xdialog",  NULL,                  NULL,            0,       1,           -1 },
 };
 
 /* layout(s) */
@@ -50,7 +50,10 @@ static const Layout layouts[] = {
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
  	{ "[@]",      spiral },
- 	{ "[\\]",      dwindle },
+ 	{ "[\\]",     dwindle },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
+	{ "|||",      col },
 };
 
 /* key definitions */
@@ -129,4 +132,7 @@ static Signal signals[] = {
 	{ 5,            setlayout,      {.v = &layouts[4]} },
 	{ 6,            setlayout,      {.v = &layouts[5]} },
 	{ 7,            setlayout,      {.v = &layouts[6]} },
+	{ 8,            setlayout,      {.v = &layouts[7]} },
+	{ 9,            setlayout,      {.v = &layouts[8]} },
+	{ 10,           setlayout,      {.v = &layouts[9]} },
 };
